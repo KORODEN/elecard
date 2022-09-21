@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242424;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: #212121;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    margin: 90px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .change {
+    margin-top: 10px;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .change .block {
+    display: flex;
+    align-items: center;
+}
+
+main .change .block:first-child input {
+    margin-right: 10px;
+}
+
+main .change label {
+    margin-right: 5px;
+}
+
+main .sorting {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .sorting .sort {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .sorting .sort .block {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+main .sorting .sort .block:last-child input {
+    margin-right: 0px;
+}
+
+main .sorting .sort label {
+    margin-right: 5px;
+}
+
+main .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main button {
+    cursor: pointer;
+    margin: 5px 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #343434;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: background-color ease-in-out 0.2s;
+}
+
+main button:hover {
+    transition: background-color ease-in-out 0.2s;
+    background-color: #424242;
+}
+
+main .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .card {
+    position: relative;
+    width: 30%;
+    min-width: 280px;
+    height: 480px;
+    margin: 20px;
+    border-radius: 12px;
+    transition: transform ease-in-out 0.2s;
+}
+
+main .card:hover {
+    cursor: pointer;
+    transition: transform ease-in-out 0.2s;
+    transform: scale(1.05);
+}
+
+main .card .image {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .card h2 {
+    padding-top: 10px;
+}
+
+main .card p {
+    padding: 8px 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+main .card .delete {
+    opacity: 0;
+    transition: opacity ease-in-out 0.2s;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #343434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .card .delete {
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+main .card .delete:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+main .card:hover .delete {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity ease-in-out 0.2s;
+}
+
+
+/* древовидный спискок */
+
+.treeHTML {
+    line-height: normal;
+}
+
+.treeHTML details {
+    display: block;
+}
+
+.treeHTML summary {
+    cursor: pointer;
+}
+
+.treeHTML div {
+    position: relative;
+    margin: 0 0 0 .5em;
+    padding: 0 0 0 1.2em;
+}
+
+.treeHTML img {
+    cursor: pointer;
+}
+
+.smallImage {
+    width: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.treeHTML p {
+    margin: 0;
+    margin-left: 8px;
+}
+
+
+/*********************/
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+footer {
+    /* margin-top: auto; */
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: #212121;
+    border-top: 4px solid #f84040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Loader */
+
+.lds-dual-ring {
+    display: none;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #f84040;
+    border-color: #f84040 transparent #f84040 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
